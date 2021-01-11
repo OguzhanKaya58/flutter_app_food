@@ -112,7 +112,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "1",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -145,7 +145,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "2",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -178,7 +178,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "3",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -210,7 +210,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "4",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -242,7 +242,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "5",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -282,7 +282,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "6",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -315,7 +315,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "7",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -348,7 +348,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "8",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -381,7 +381,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "9",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -414,7 +414,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "10",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -446,7 +446,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "11",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -478,7 +478,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "12",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -515,7 +515,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "13",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -548,7 +548,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "14",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -581,7 +581,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "15",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -614,7 +614,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "16",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -647,7 +647,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "17",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -679,7 +679,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "18",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -711,7 +711,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "19",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -748,7 +748,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "20",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -781,7 +781,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "21",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -814,7 +814,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "22",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -847,7 +847,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "23",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -880,7 +880,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "24",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -912,7 +912,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "25",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -944,7 +944,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "26",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -981,7 +981,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "27",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -1013,8 +1013,8 @@ class September extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "28",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            "24",
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -1047,7 +1047,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "29",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
@@ -1080,7 +1080,7 @@ class September extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "30",
-                            style: TextStyle(color: whiteColor, fontSize: 36),
+                            style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
                       ),
