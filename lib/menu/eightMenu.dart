@@ -39,9 +39,11 @@ class EightMenu extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, whiteColor]),
+              colors: [kPrimaryColor, kPrimaryLightColor]),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(

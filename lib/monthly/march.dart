@@ -60,13 +60,13 @@ class March extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: kPrimaryLightColor,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, Colors.white]),
+              colors: [kPrimaryColor, kPrimaryLightColor]),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -84,6 +84,8 @@ class March extends StatelessWidget {
               ),
               Weak(),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -317,6 +319,8 @@ class March extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -550,6 +554,8 @@ class March extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -783,6 +789,8 @@ class March extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -1006,7 +1014,7 @@ class March extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "24",
+                            "28",
                             style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),
@@ -1016,6 +1024,8 @@ class March extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {

@@ -59,12 +59,13 @@ class April extends StatelessWidget {
           ),
         ],
       ),
+      backgroundColor: kPrimaryLightColor,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, Colors.white]),
+              colors: [kPrimaryColor, kPrimaryLightColor]),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -82,7 +83,7 @@ class April extends StatelessWidget {
               ),
               Weak(),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   GestureDetector(
@@ -221,6 +222,8 @@ class April extends StatelessWidget {
                 ],
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -454,6 +457,8 @@ class April extends StatelessWidget {
                 ],
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -687,6 +692,8 @@ class April extends StatelessWidget {
                 ],
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -919,6 +926,8 @@ class April extends StatelessWidget {
                 ],
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -1012,7 +1021,7 @@ class April extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "24",
+                            "28",
                             style: TextStyle(color: whiteColor, fontSize: 24),
                           ),
                         ),

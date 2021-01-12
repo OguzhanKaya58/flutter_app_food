@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_app_food/foods/anayemek/firinda_tavuk_kanat.dart';
 import 'package:flutter_app_food/foods/arayemek/bulgur_pilavi.dart';
 import 'package:flutter_app_food/foods/corbalar/yayla_corbasi.dart';
@@ -39,9 +40,14 @@ class OneMenu extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, whiteColor]),
+              colors: [
+                kPrimaryColor,
+                kPrimaryLightColor,
+              ]),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
               onTap: () => Navigator.of(context).push(

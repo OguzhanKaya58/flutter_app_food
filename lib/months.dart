@@ -36,6 +36,7 @@ class _MonthsState extends State<Months> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       bottomNavigationBar: BottomNavyBar(
         selectedIndex: _currentIndex,
         showElevation: true,
@@ -44,21 +45,24 @@ class _MonthsState extends State<Months> {
         onItemSelected: (index) => setState(() {
           _currentIndex = index;
         }),
-        containerHeight: 51,
+        backgroundColor: kPrimaryLightColor,
+        containerHeight: size.height / 15,
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
               icon: Image.asset(
                 "icon/food_icon.png",
                 fit: BoxFit.fill,
-                width: size.width / 15,
+                width: size.width / 18,
                 color: monthsTextColor,
               ),
               title: GestureDetector(
-                child: Text('Ana Yemekler'),
+                child: Text(
+                  'Ana Yemekler',
+                ),
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => AllFood())),
               ),
-              activeColor: appBarColor,
+              activeColor: whiteColor,
               textAlign: TextAlign.center,
               inactiveColor: monthsTextColor),
           BottomNavyBarItem(
@@ -67,14 +71,16 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 15,
+                width: size.width / 18,
               ),
               title: GestureDetector(
-                child: Text('Ara\nSıcaklar'),
+                child: Text(
+                  'Ara\nSıcaklar',
+                ),
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => AllRice())),
               ),
-              activeColor: appBarColor,
+              activeColor: whiteColor,
               textAlign: TextAlign.center,
               inactiveColor: monthsTextColor),
           BottomNavyBarItem(
@@ -83,14 +89,16 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 15,
+                width: size.width / 18,
               ),
               title: GestureDetector(
-                child: Text('Çorbalar'),
+                child: Text(
+                  'Çorbalar',
+                ),
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => AllSoup())),
               ),
-              activeColor: appBarColor,
+              activeColor: whiteColor,
               textAlign: TextAlign.center,
               inactiveColor: monthsTextColor),
           BottomNavyBarItem(
@@ -99,19 +107,23 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 15,
+                width: size.width / 18,
               ),
               title: GestureDetector(
-                child: Text('Tatlılar'),
+                child: Text(
+                  'Tatlılar',
+                ),
                 onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => AllDessert())),
               ),
-              activeColor: appBarColor,
+              activeColor: whiteColor,
               textAlign: TextAlign.center,
               inactiveColor: monthsTextColor),
         ],
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             height: size.height / 67,
@@ -137,7 +149,7 @@ class _MonthsState extends State<Months> {
                       child: Text("OCAK",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -145,8 +157,8 @@ class _MonthsState extends State<Months> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => February())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => February())),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -161,7 +173,7 @@ class _MonthsState extends State<Months> {
                       child: Text("ŞUBAT",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -185,7 +197,7 @@ class _MonthsState extends State<Months> {
                       child: Text("MART",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -213,7 +225,7 @@ class _MonthsState extends State<Months> {
                       child: Text("NİSAN",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -237,7 +249,7 @@ class _MonthsState extends State<Months> {
                       child: Text("MAYIS",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -261,7 +273,7 @@ class _MonthsState extends State<Months> {
                       child: Text("HAZİRAN",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -289,7 +301,7 @@ class _MonthsState extends State<Months> {
                       child: Text("TEMMUZ",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -314,7 +326,7 @@ class _MonthsState extends State<Months> {
                       child: Text("AĞUSTOS",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -322,8 +334,8 @@ class _MonthsState extends State<Months> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => September())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => September())),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -338,7 +350,7 @@ class _MonthsState extends State<Months> {
                       child: Text("EYLÜL",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -366,7 +378,7 @@ class _MonthsState extends State<Months> {
                       child: Text("EKİM",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -374,8 +386,8 @@ class _MonthsState extends State<Months> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => November())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => November())),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -390,7 +402,7 @@ class _MonthsState extends State<Months> {
                       child: Text("KASIM",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
@@ -398,8 +410,8 @@ class _MonthsState extends State<Months> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => December())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => December())),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -414,7 +426,7 @@ class _MonthsState extends State<Months> {
                       child: Text("ARALIK",
                           style: TextStyle(
                             fontSize: 20,
-                            color: monthsTextColor,
+                            color: whiteColor,
                           )),
                       alignment: Alignment.bottomCenter,
                     ),
