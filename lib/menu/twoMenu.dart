@@ -34,51 +34,53 @@ class TwoMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => SutluMercimekCorbasi())),
-              child: Menu(
-                  name: "Sütlü Mercimek Çorbası",
-                  imgPath: "images/mercimek-corbasi.jpg",
-                  calorie: "109 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => FirindaPureliKofte())),
-              child: Menu(
-                  name: "Fırında Püreli Köfte",
-                  imgPath: "images/pure_kofte.jpg",
-                  calorie: "383 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ArpaSehriyeliBulgur())),
-              child: Menu(
-                  name: "Arpa Şehriyeli Bulgur Pilavı",
-                  imgPath: "images/sehriyeli-bulgur-pilavi.jpg",
-                  calorie: "266 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => BalKabagi())),
-              child: Menu(
-                name: "Bal Kabağı Pastası",
-                imgPath: "images/kabak-tatlisi.jpg",
-                calorie: "200 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SutluMercimekCorbasi())),
+                child: Menu(
+                    name: "Sütlü Mercimek Çorbası",
+                    imgPath: "images/mercimek-corbasi.jpg",
+                    calorie: "109 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FirindaPureliKofte())),
+                child: Menu(
+                    name: "Fırında Püreli Köfte",
+                    imgPath: "images/pure_kofte.jpg",
+                    calorie: "383 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ArpaSehriyeliBulgur())),
+                child: Menu(
+                    name: "Arpa Şehriyeli Bulgur Pilavı",
+                    imgPath: "images/sehriyeli-bulgur-pilavi.jpg",
+                    calorie: "266 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => BalKabagi())),
+                child: Menu(
+                  name: "Bal Kabağı Pastası",
+                  imgPath: "images/kabak-tatlisi.jpg",
+                  calorie: "200 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

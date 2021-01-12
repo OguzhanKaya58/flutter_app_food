@@ -34,51 +34,53 @@ class SixMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => KerevizYapragiCorbasi())),
-              child: Menu(
-                  name: "Kereviz Yaprağı Çorbası",
-                  imgPath: "images/kereviz-yapragi-corbasi.jpg",
-                  calorie: "139 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TenceredeKofteliPatatesYemegi())),
-              child: Menu(
-                  name: "Tencerede Köfteli Patates Yemeği",
-                  imgPath: "images/misket-kofteli-patates-yemegi.jpg",
-                  calorie: "398 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => EristeliBulgurPilavi())),
-              child: Menu(
-                  name: "Erişteli Bulgur Pilavı",
-                  imgPath: "images/eristeli-bulgur-pilavi.jpg",
-                  calorie: "149 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SarayMuhallebisi())),
-              child: Menu(
-                name: "Saray Muhallebisi",
-                imgPath: "images/saray-muhallebisi.jpg",
-                calorie: "233 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => KerevizYapragiCorbasi())),
+                child: Menu(
+                    name: "Kereviz Yaprağı Çorbası",
+                    imgPath: "images/kereviz-yapragi-corbasi.jpg",
+                    calorie: "139 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TenceredeKofteliPatatesYemegi())),
+                child: Menu(
+                    name: "Tencerede Köfteli Patates Yemeği",
+                    imgPath: "images/misket-kofteli-patates-yemegi.jpg",
+                    calorie: "398 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => EristeliBulgurPilavi())),
+                child: Menu(
+                    name: "Erişteli Bulgur Pilavı",
+                    imgPath: "images/eristeli-bulgur-pilavi.jpg",
+                    calorie: "149 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SarayMuhallebisi())),
+                child: Menu(
+                  name: "Saray Muhallebisi",
+                  imgPath: "images/saray-muhallebisi.jpg",
+                  calorie: "233 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

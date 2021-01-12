@@ -34,51 +34,53 @@ class TwentyMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TavukCorbasi())),
-              child: Menu(
-                  name: "Tavuk Çorbası",
-                  imgPath: "images/tavuk-corbasi.jpg",
-                  calorie: "88 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TenceredePatlicanOturtma())),
-              child: Menu(
-                  name: "Tencerede Patlıcan Oturtma",
-                  imgPath: "images/tencerede-patlican-oturtma.jpg",
-                  calorie: "200 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => EzogelinPilavi())),
-              child: Menu(
-                  name: "Ezogelin Pilavı",
-                  imgPath: "images/ezogelin-pilavi.jpg",
-                  calorie: "224 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => KramaliMuhallebi())),
-              child: Menu(
-                name: "Kremalı Muhallebi",
-                imgPath: "images/kramali-muhallebi.jpg",
-                calorie: "233 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => TavukCorbasi())),
+                child: Menu(
+                    name: "Tavuk Çorbası",
+                    imgPath: "images/tavuk-corbasi.jpg",
+                    calorie: "88 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TenceredePatlicanOturtma())),
+                child: Menu(
+                    name: "Tencerede Patlıcan Oturtma",
+                    imgPath: "images/tencerede-patlican-oturtma.jpg",
+                    calorie: "200 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => EzogelinPilavi())),
+                child: Menu(
+                    name: "Ezogelin Pilavı",
+                    imgPath: "images/ezogelin-pilavi.jpg",
+                    calorie: "224 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => KramaliMuhallebi())),
+                child: Menu(
+                  name: "Kremalı Muhallebi",
+                  imgPath: "images/kramali-muhallebi.jpg",
+                  calorie: "233 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

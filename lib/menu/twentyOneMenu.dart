@@ -34,51 +34,53 @@ class TwentyOneMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TopcatiCorbasi())),
-              child: Menu(
-                  name: "Topçata Çorbası",
-                  imgPath: "images/Topçata-Çorbası.jpg",
-                  calorie: "168 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => FirindaSebzeliTavukSote())),
-              child: Menu(
-                  name: "Fırında Sebzeli Tavuk Sote",
-                  imgPath: "images/Fırında_sebzeli_tavuk.jpg",
-                  calorie: "389 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => FirikPilavi())),
-              child: Menu(
-                  name: "Firik Pilavı",
-                  imgPath: "images/firik-pilavi.png",
-                  calorie: "346 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => KadayifliEtimekTatlisi())),
-              child: Menu(
-                name: "Kadayıflı Etimek Tatlısı",
-                imgPath: "images/Kadayıflı-Etimek-Tatlısı.jpg",
-                calorie: "233 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => TopcatiCorbasi())),
+                child: Menu(
+                    name: "Topçata Çorbası",
+                    imgPath: "images/Topçata-Çorbası.jpg",
+                    calorie: "168 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FirindaSebzeliTavukSote())),
+                child: Menu(
+                    name: "Fırında Sebzeli Tavuk Sote",
+                    imgPath: "images/Fırında_sebzeli_tavuk.jpg",
+                    calorie: "389 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => FirikPilavi())),
+                child: Menu(
+                    name: "Firik Pilavı",
+                    imgPath: "images/firik-pilavi.png",
+                    calorie: "346 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => KadayifliEtimekTatlisi())),
+                child: Menu(
+                  name: "Kadayıflı Etimek Tatlısı",
+                  imgPath: "images/Kadayıflı-Etimek-Tatlısı.jpg",
+                  calorie: "233 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

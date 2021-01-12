@@ -34,51 +34,53 @@ class NineMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TavukluUnCorbasi())),
-              child: Menu(
-                  name: "Tavuklu Un Çorbası",
-                  imgPath: "images/tavuklu-un-corbasi.jpg",
-                  calorie: "36 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TencereEtliKuruFasulye())),
-              child: Menu(
-                  name: "Tencerede Etli Kuru Fasulye",
-                  imgPath: "images/kuru-fasülye.jpg",
-                  calorie: "379 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => PirincPilavi())),
-              child: Menu(
-                  name: "Pirinç Pilavı",
-                  imgPath: "images/pirinc-pilavi.jpg",
-                  calorie: "130 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Keskul())),
-              child: Menu(
-                name: "Keşkül",
-                imgPath: "images/keskul.jpg",
-                calorie: "273 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => TavukluUnCorbasi())),
+                child: Menu(
+                    name: "Tavuklu Un Çorbası",
+                    imgPath: "images/tavuklu-un-corbasi.jpg",
+                    calorie: "36 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TencereEtliKuruFasulye())),
+                child: Menu(
+                    name: "Tencerede Etli Kuru Fasulye",
+                    imgPath: "images/kuru-fasülye.jpg",
+                    calorie: "379 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => PirincPilavi())),
+                child: Menu(
+                    name: "Pirinç Pilavı",
+                    imgPath: "images/pirinc-pilavi.jpg",
+                    calorie: "130 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Keskul())),
+                child: Menu(
+                  name: "Keşkül",
+                  imgPath: "images/keskul.jpg",
+                  calorie: "273 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

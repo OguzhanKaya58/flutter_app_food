@@ -34,51 +34,53 @@ class TwentyFourMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => SutluKarnabaharCorbasi())),
-              child: Menu(
-                  name: "Sütlü Karnabahar Çorbası",
-                  imgPath: "images/sutlu-karnabahar-corbasi.jpg",
-                  calorie: "114 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => FirindaEtimekliBasemelSosluTavuk())),
-              child: Menu(
-                  name: "Fırında Etimekli Beşamel Soslu Tavuk",
-                  imgPath: "images/Fırında-Etimekli-Beşamel-Soslu-Tavuk.jpg",
-                  calorie: "298 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SebzeSpagetti())),
-              child: Menu(
-                  name: "Sebze Spagetti",
-                  imgPath: "images/Sebze-Spagetti.jpg",
-                  calorie: "310 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => BiskuviliPasta())),
-              child: Menu(
-                name: "Bisküvili Pasta",
-                imgPath: "images/Bisküvili-Pasta.jpg",
-                calorie: "427 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SutluKarnabaharCorbasi())),
+                child: Menu(
+                    name: "Sütlü Karnabahar Çorbası",
+                    imgPath: "images/sutlu-karnabahar-corbasi.jpg",
+                    calorie: "114 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FirindaEtimekliBasemelSosluTavuk())),
+                child: Menu(
+                    name: "Fırında Etimekli Beşamel Soslu Tavuk",
+                    imgPath: "images/Fırında-Etimekli-Beşamel-Soslu-Tavuk.jpg",
+                    calorie: "298 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SebzeSpagetti())),
+                child: Menu(
+                    name: "Sebze Spagetti",
+                    imgPath: "images/Sebze-Spagetti.jpg",
+                    calorie: "310 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => BiskuviliPasta())),
+                child: Menu(
+                  name: "Bisküvili Pasta",
+                  imgPath: "images/Bisküvili-Pasta.jpg",
+                  calorie: "427 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

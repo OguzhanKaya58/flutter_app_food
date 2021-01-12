@@ -52,12 +52,12 @@ class _MonthsState extends State<Months> {
               icon: Image.asset(
                 "icon/food_icon.png",
                 fit: BoxFit.fill,
-                width: size.width / 18,
+                width: size.width / 24,
                 color: monthsTextColor,
               ),
               title: GestureDetector(
                 child: Text(
-                  'Ana Yemekler',
+                  'Ana\nYemekler',
                 ),
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => AllFood())),
@@ -71,7 +71,7 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 18,
+                width: size.width / 24,
               ),
               title: GestureDetector(
                 child: Text(
@@ -89,7 +89,7 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 18,
+                width: size.width / 24,
               ),
               title: GestureDetector(
                 child: Text(
@@ -107,7 +107,7 @@ class _MonthsState extends State<Months> {
                 fit: BoxFit.fill,
                 alignment: Alignment.topCenter,
                 color: monthsTextColor,
-                width: size.width / 18,
+                width: size.width / 24,
               ),
               title: GestureDetector(
                 child: Text(
@@ -121,321 +121,327 @@ class _MonthsState extends State<Months> {
               inactiveColor: monthsTextColor),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: size.height / 67,
-          ),
-          Row(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        alignment: Alignment.center,
+        child: SingleChildScrollView(
+          child: Column(
             children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => January())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(24)),
-                      image: DecorationImage(
-                        image: AssetImage("images/ocak.png"),
-                        fit: BoxFit.fill,
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => January())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 5.1,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(24)),
+                          image: DecorationImage(
+                            image: AssetImage("images/ocak.png"),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Container(
+                          child: Text("OCAK",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
                       ),
                     ),
-                    child: Container(
-                      child: Text("OCAK",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => February())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/subat.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("ŞUBAT",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => March())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/mart.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("MART",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => February())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/subat.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("ŞUBAT",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => April())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/nisan.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("NİSAN",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => May())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/mayis.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("MAYIS",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => June())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/haziran.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("HAZİRAN",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => March())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/mart.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("MART",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => July())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/temmuz.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("TEMMUZ",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => August())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/agustos.png"),
+                                fit: BoxFit.fitWidth,
+                                alignment: Alignment.topCenter)),
+                        child: Container(
+                          child: Text("AĞUSTOS",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => September())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/eylül.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("EYLÜL",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => April())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/nisan.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("NİSAN",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => October())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/ekim.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("EKİM",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => May())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/mayis.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("MAYIS",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => November())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/kasım.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("KASIM",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => June())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/haziran.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("HAZİRAN",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => December())),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: size.height / 4.9,
+                        width: size.width / 3.4,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            image: DecorationImage(
+                                image: AssetImage("images/aralik.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          child: Text("ARALIK",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: whiteColor,
+                              )),
+                          alignment: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => July())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/temmuz.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("TEMMUZ",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => August())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/agustos.png"),
-                            fit: BoxFit.fitWidth,
-                            alignment: Alignment.topCenter)),
-                    child: Container(
-                      child: Text("AĞUSTOS",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => September())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/eylül.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("EYLÜL",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => October())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/ekim.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("EKİM",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => November())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/kasım.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("KASIM",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => December())),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: size.height / 4.9,
-                    width: size.width / 3.4,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(24)),
-                        image: DecorationImage(
-                            image: AssetImage("images/aralik.png"),
-                            fit: BoxFit.fill)),
-                    child: Container(
-                      child: Text("ARALIK",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: whiteColor,
-                          )),
-                      alignment: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }

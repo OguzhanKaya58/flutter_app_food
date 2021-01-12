@@ -34,51 +34,53 @@ class FiveMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => DomatesliKabakCorbasi())),
-              child: Menu(
-                  name: "Domatesli Kabak Çorbası",
-                  imgPath: "images/domatesli-kabak-corbasi.jpg",
-                  calorie: "75 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SoganliTavukluPilav())),
-              child: Menu(
-                  name: "Soğanlı Tavuklu Pilav",
-                  imgPath: "images/soganli-tavuklu-pilav.jpg",
-                  calorie: "153 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => IspanakYemegi())),
-              child: Menu(
-                  name: "Ispanak Yemeği",
-                  imgPath: "images/ıspanak-yemegi.jpg",
-                  calorie: "76 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => BisluviliTavukGogsu())),
-              child: Menu(
-                name: "Bisküvili Yalançı Tavuk Göğsü",
-                imgPath: "images/yalanci-tavuk-göğsü.jpg",
-                calorie: "210 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DomatesliKabakCorbasi())),
+                child: Menu(
+                    name: "Domatesli Kabak Çorbası",
+                    imgPath: "images/domatesli-kabak-corbasi.jpg",
+                    calorie: "75 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SoganliTavukluPilav())),
+                child: Menu(
+                    name: "Soğanlı Tavuklu Pilav",
+                    imgPath: "images/soganli-tavuklu-pilav.jpg",
+                    calorie: "153 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => IspanakYemegi())),
+                child: Menu(
+                    name: "Ispanak Yemeği",
+                    imgPath: "images/ıspanak-yemegi.jpg",
+                    calorie: "76 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => BisluviliTavukGogsu())),
+                child: Menu(
+                  name: "Bisküvili Yalançı Tavuk Göğsü",
+                  imgPath: "images/yalanci-tavuk-göğsü.jpg",
+                  calorie: "210 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

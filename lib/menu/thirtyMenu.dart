@@ -34,51 +34,53 @@ class ThirtyMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => PirincliDomatesCorbasi())),
-              child: Menu(
-                  name: "Pirinçli Domates Çorbası",
-                  imgPath: "images/Pirinçli-Domates-Çorbası.jpg",
-                  calorie: "84 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => CobanBoregi())),
-              child: Menu(
-                  name: "Çoban Böreği",
-                  imgPath: "images/Çoban-Böreği.jpg",
-                  calorie: "475 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => DogmeliKereviz())),
-              child: Menu(
-                  name: "Düğmeli Kereviz",
-                  imgPath: "images/Düğmeli-Kereviz.jpg",
-                  calorie: "220 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Sekerpare())),
-              child: Menu(
-                name: "Şekerpare",
-                imgPath: "images/Şekerpare.webp",
-                calorie: "424 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => PirincliDomatesCorbasi())),
+                child: Menu(
+                    name: "Pirinçli Domates Çorbası",
+                    imgPath: "images/Pirinçli-Domates-Çorbası.jpg",
+                    calorie: "84 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => CobanBoregi())),
+                child: Menu(
+                    name: "Çoban Böreği",
+                    imgPath: "images/Çoban-Böreği.jpg",
+                    calorie: "475 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => DogmeliKereviz())),
+                child: Menu(
+                    name: "Düğmeli Kereviz",
+                    imgPath: "images/Düğmeli-Kereviz.jpg",
+                    calorie: "220 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Sekerpare())),
+                child: Menu(
+                  name: "Şekerpare",
+                  imgPath: "images/Şekerpare.webp",
+                  calorie: "424 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

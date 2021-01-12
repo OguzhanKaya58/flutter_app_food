@@ -63,42 +63,44 @@ class Menu extends StatelessWidget {
           Container(
             height: size.height,
             width: size.width / 2,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black87,
-                            spreadRadius: 1,
-                            blurRadius: 3,
-                            offset: Offset(-5, 6), // changes position of shadow
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black87,
+                              spreadRadius: 1,
+                              blurRadius: 3,
+                              offset: Offset(-5, 6), // changes position of shadow
+                            ),
+                          ],
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(24),
+                            bottomRight: Radius.circular(24),
                           ),
-                        ],
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(24),
-                          bottomRight: Radius.circular(24),
-                        ),
-                        image: DecorationImage(
-                          image: AssetImage("$imgPath"),
-                          fit: BoxFit.fill,
-                        ),
-                        color: Colors.blue.shade200),
-                    height: size.height / 8,
-                    width: size.width / 2,
+                          image: DecorationImage(
+                            image: AssetImage("$imgPath"),
+                            fit: BoxFit.fill,
+                          ),
+                          color: Colors.blue.shade200),
+                      height: size.height / 8,
+                      width: size.width / 2,
+                    ),
                   ),
-                ),
-                Text(
-                  "$calorie",
-                  style: TextStyle(
-                      color: whiteColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
+                  Text(
+                    "$calorie",
+                    style: TextStyle(
+                        color: whiteColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ),
           )
         ],

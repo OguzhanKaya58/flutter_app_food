@@ -34,51 +34,53 @@ class FifteenMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [kPrimaryColor, kPrimaryLightColor]),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => KarnibaharCorbasi())),
-              child: Menu(
-                  name: "Karnabahar Çorbası",
-                  imgPath: "images/salcali-karnibahar-corbasi.jpg",
-                  calorie: "112 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => FirindaTavukSis())),
-              child: Menu(
-                  name: "Fırında Tavuk Şiş",
-                  imgPath: "images/firinda-tavuk-sis.jpg",
-                  calorie: "126 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => EristePilavi())),
-              child: Menu(
-                  name: "Erişte Pilavı",
-                  imgPath: "images/eriste-pilavi.jpg",
-                  calorie: "109 Kalori"),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => PortakalliMuhallebi())),
-              child: Menu(
-                name: "Portakallı Muhallebi",
-                imgPath: "images/portakalli-muhallebi.jpg",
-                calorie: "113 Kalori",
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [kPrimaryColor, kPrimaryLightColor]),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => KarnibaharCorbasi())),
+                child: Menu(
+                    name: "Karnabahar Çorbası",
+                    imgPath: "images/salcali-karnibahar-corbasi.jpg",
+                    calorie: "112 Kalori"),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => FirindaTavukSis())),
+                child: Menu(
+                    name: "Fırında Tavuk Şiş",
+                    imgPath: "images/firinda-tavuk-sis.jpg",
+                    calorie: "126 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => EristePilavi())),
+                child: Menu(
+                    name: "Erişte Pilavı",
+                    imgPath: "images/eriste-pilavi.jpg",
+                    calorie: "109 Kalori"),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => PortakalliMuhallebi())),
+                child: Menu(
+                  name: "Portakallı Muhallebi",
+                  imgPath: "images/portakalli-muhallebi.jpg",
+                  calorie: "113 Kalori",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
