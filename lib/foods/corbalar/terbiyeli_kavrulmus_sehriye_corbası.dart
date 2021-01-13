@@ -14,6 +14,7 @@ class TerbiyeliKavrulmusSehriyeCorbasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Terbiyeli Kavrulmuş Şehriye Çorbası",
@@ -42,7 +43,7 @@ class TerbiyeliKavrulmusSehriyeCorbasi extends StatelessWidget {
                 cooking: "25dk",
               ),
               Materials(),
-              FoodMaterial(name: "1 dolu yemek kaşığı margarin veya tereyağı"),
+              FoodMaterial(name: "1 dolu yemek kaşığı tereyağı"),
               FoodMaterial(name: "1 su bardağı tel şehriye"),
               FoodMaterial(name: "4 su bardağı su"),
               FoodMenuSubtitle(subTitleName: "Terbiyesi için:"),

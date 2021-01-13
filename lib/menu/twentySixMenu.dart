@@ -14,6 +14,7 @@ class TwentySixMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "26.Gün",
@@ -34,53 +35,51 @@ class TwentySixMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => PasaCorbasi())),
-                child: Menu(
-                    name: "Paşa Çorbası",
-                    imgPath: "images/Paşa-Çorbası.jpg",
-                    calorie: "105 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => PasaCorbasi())),
+              child: Menu(
+                  name: "Paşa Çorbası",
+                  imgPath: "images/Paşa-Çorbası.jpg",
+                  calorie: "105 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => KatikliDolma())),
+              child: Menu(
+                  name: "Katıklı Dolma",
+                  imgPath: "images/katikli-dolma.jpg",
+                  calorie: "353 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => LahanaYemegi())),
+              child: Menu(
+                  name: "Lahana Yemeği",
+                  imgPath: "images/lahana-yemeği.jpg",
+                  calorie: "107 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => BulutTatlisi())),
+              child: Menu(
+                name: "Bulut Tatlısı",
+                imgPath: "images/bulut-tatlisi.jpg",
+                calorie: "465 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => KatikliDolma())),
-                child: Menu(
-                    name: "Katıklı Dolma",
-                    imgPath: "images/katikli-dolma.jpg",
-                    calorie: "353 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => LahanaYemegi())),
-                child: Menu(
-                    name: "Lahana Yemeği",
-                    imgPath: "images/lahana-yemeği.jpg",
-                    calorie: "107 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => BulutTatlisi())),
-                child: Menu(
-                  name: "Bulut Tatlısı",
-                  imgPath: "images/bulut-tatlisi.jpg",
-                  calorie: "465 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

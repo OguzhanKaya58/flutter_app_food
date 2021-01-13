@@ -13,6 +13,7 @@ class TavadaTavukBaget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Tavada Tavuk Baget",

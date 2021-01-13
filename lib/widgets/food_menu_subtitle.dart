@@ -9,6 +9,7 @@ class FoodMenuSubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -16,7 +17,7 @@ class FoodMenuSubtitle extends StatelessWidget {
         child: Text(
           "$subTitleName",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: size.width / 19,
             color: whiteColor,
             fontWeight: FontWeight.bold,
           ),

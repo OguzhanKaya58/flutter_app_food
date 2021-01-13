@@ -272,7 +272,7 @@ class AllDessert extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SutluRuloTatlo())),
+                    MaterialPageRoute(builder: (context) => SutluRuloTatli())),
                 child: Menu(
                   name: "Sütlü Rulo Tatlı",
                   imgPath: "images/Sütlü-Rulo-Tatlı.jpg",

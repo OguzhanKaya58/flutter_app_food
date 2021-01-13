@@ -14,6 +14,7 @@ class KarisikTursu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Karışık Turşu",
@@ -44,7 +45,7 @@ class KarisikTursu extends StatelessWidget {
                 cooking: "0dk",
               ),
               Materials(),
-              FoodMaterial(name: "1 adet rta boy beyaz lahana"),
+              FoodMaterial(name: "1 adet ota boy beyaz lahana"),
               FoodMaterial(name: "1/2 adet orta boy karnabahar"),
               FoodMaterial(name: "10 adet orta boy yeşil domates"),
               FoodMaterial(name: "500 gram arpacık soğan"),

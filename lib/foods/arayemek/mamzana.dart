@@ -13,6 +13,7 @@ class Mamzana extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Mamzana",
@@ -46,7 +47,7 @@ class Mamzana extends StatelessWidget {
               FoodMaterial(name: "2 adet közlenmiş patlıcan"),
               FoodMaterial(name: "2 adet közlenmiş kırmızı kapya biber"),
               FoodMaterial(name: "2-3 adet yeşil sivri biber"),
-              FoodMaterial(name: "1 adet orta boy domates(kabuğu soyulmuş)"),
+              FoodMaterial(name: "1 adet orta boy domates"),
               FoodMaterial(name: "İki tutam maydanoz"),
               FoodMaterial(name: "2 diş sarımsak"),
               FoodMaterial(name: "Zeytinyağ"),

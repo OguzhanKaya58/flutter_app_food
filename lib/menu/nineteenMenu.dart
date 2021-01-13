@@ -14,6 +14,7 @@ class NineteenMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "19.Gün",
@@ -34,53 +35,51 @@ class NineteenMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => MuradiyeCorbasi())),
-                child: Menu(
-                    name: "Muradiye Çorbası",
-                    imgPath: "images/muradiye-corbasi.jpg",
-                    calorie: "91 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => MuradiyeCorbasi())),
+              child: Menu(
+                  name: "Muradiye Çorbası",
+                  imgPath: "images/muradiye-corbasi.jpg",
+                  calorie: "91 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => FirindaSebzeliKofte())),
+              child: Menu(
+                  name: "Fırında Sebzeli Köfte",
+                  imgPath: "images/sebzeli-firinda-kofte.jpg",
+                  calorie: "398 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => SalcaliBulgurPilavi())),
+              child: Menu(
+                  name: "Salçalı Bulgur Pilavı",
+                  imgPath: "images/salcali-bulgur-pilavi.jpg",
+                  calorie: "200 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => KadayifliPasaSarmasi())),
+              child: Menu(
+                name: "Kadayıflı Paşa Sarması",
+                imgPath: "images/kadayifli-pasa-sarma.jpg",
+                calorie: "310 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => FirindaSebzeliKofte())),
-                child: Menu(
-                    name: "Fırında Sebzeli Köfte",
-                    imgPath: "images/sebzeli-firinda-kofte.jpg",
-                    calorie: "398 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => SalcaliBulgurPilavi())),
-                child: Menu(
-                    name: "Salçalı Bulgur Pilavı",
-                    imgPath: "images/salcali-bulgur-pilavi.jpg",
-                    calorie: "200 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => KadayifliPasaSarmasi())),
-                child: Menu(
-                  name: "Kadayıflı Paşa Sarması",
-                  imgPath: "images/kadayifli-pasa-sarma.jpg",
-                  calorie: "310 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

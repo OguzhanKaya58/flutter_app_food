@@ -14,6 +14,7 @@ class TenMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "10.Gün",
@@ -34,53 +35,51 @@ class TenMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => TavukCorbasi())),
-                child: Menu(
-                    name: "Tavuk Çorbası",
-                    imgPath: "images/tavuk-corbasi.jpg",
-                    calorie: "88 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => TavukCorbasi())),
+              child: Menu(
+                  name: "Tavuk Çorbası",
+                  imgPath: "images/tavuk-corbasi.jpg",
+                  calorie: "88 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => KofteliPatatesDizmesi())),
+              child: Menu(
+                  name: "Köfteli Patates Dizmesi",
+                  imgPath: "images/kofteli-patates-dizmesi.jpg",
+                  calorie: "310 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => SebzeliArpaSehriyePilavi())),
+              child: Menu(
+                  name: "Sebzeli Arpa Şehriye Pilavı",
+                  imgPath: "images/sebzeli-arpa-sehriye-pilav.jpg",
+                  calorie: "266 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => SultanTatlisi())),
+              child: Menu(
+                name: "Sultan Tatlısı",
+                imgPath: "images/sultan-tatlisi.jpg",
+                calorie: "345 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => KofteliPatatesDizmesi())),
-                child: Menu(
-                    name: "Köfteli Patates Dizmesi",
-                    imgPath: "images/kofteli-patates-dizmesi.jpg",
-                    calorie: "310 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => SebzeliArpaSehriyePilavi())),
-                child: Menu(
-                    name: "Sebzeli Arpa Şehriye Pilavı",
-                    imgPath: "images/sebzeli-arpa-sehriye-pilav.jpg",
-                    calorie: "266 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SultanTatlisi())),
-                child: Menu(
-                  name: "Sultan Tatlısı",
-                  imgPath: "images/sultan-tatlisi.jpg",
-                  calorie: "345 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -16,24 +16,27 @@ class Preparation extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
             "Kaç Kişilik: $howManyPerson",
             style: TextStyle(
-              fontSize: 12,
+              fontSize: size.width/33,
               color: whiteColor,
             ),
           ),
+        ),
+        SizedBox(
+          width: size.width / 36,
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
             "Hazırlama: $preparation",
             style: TextStyle(
-              fontSize: 12,
+              fontSize: size.width/33,
               color: whiteColor,
             ),
           ),
@@ -46,7 +49,7 @@ class Preparation extends StatelessWidget {
           child: Text(
             "Pişirme: $cooking",
             style: TextStyle(
-              fontSize: 12,
+              fontSize: size.width/33,
               color: whiteColor,
             ),
           ),

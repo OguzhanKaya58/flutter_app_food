@@ -55,12 +55,13 @@ class Menu extends StatelessWidget {
               "$name",
               style: TextStyle(
                 color: whiteColor,
-                fontSize: 19,
+                fontSize: size.width/21,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           Container(
+            alignment: Alignment.center,
             height: size.height,
             width: size.width / 2,
             child: SingleChildScrollView(
@@ -96,7 +97,7 @@ class Menu extends StatelessWidget {
                     "$calorie",
                     style: TextStyle(
                         color: whiteColor,
-                        fontSize: 16,
+                        fontSize: size.width/27,
                         fontWeight: FontWeight.bold),
                   ),
                 ],

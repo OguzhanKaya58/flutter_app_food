@@ -74,15 +74,15 @@ class January extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                SizedBox(
-                  height: size.height / 24,
-                ),
                 Text(
                   "Ocak",
                   style: TextStyle(
-                      fontSize: 48,
+                      fontSize: size.width / 7,
                       fontWeight: FontWeight.bold,
                       color: whiteColor),
+                ),
+                SizedBox(
+                  height: size.height / 31,
                 ),
                 Weak(),
                 Row(
@@ -183,8 +183,8 @@ class January extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => ThreeMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ThreeMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
@@ -221,8 +221,8 @@ class January extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => FourMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => FourMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
@@ -254,8 +254,8 @@ class January extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => FiveMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => FiveMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
@@ -320,8 +320,8 @@ class January extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => SevenMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SevenMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
@@ -353,8 +353,8 @@ class January extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => EightMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => EightMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
@@ -386,8 +386,8 @@ class January extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => NineMenu()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => NineMenu()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),

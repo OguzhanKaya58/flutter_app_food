@@ -14,6 +14,7 @@ class SeventeenMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "17.Gün",
@@ -34,53 +35,51 @@ class SeventeenMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => HamursuzArabasiCorbasi())),
-                child: Menu(
-                    name: "Hamursuz Arabaşı Çorbası",
-                    imgPath: "images/hamursuz-arabasi-corbasi.jpg",
-                    calorie: "188 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => HamursuzArabasiCorbasi())),
+              child: Menu(
+                  name: "Hamursuz Arabaşı Çorbası",
+                  imgPath: "images/hamursuz-arabasi-corbasi.jpg",
+                  calorie: "188 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => PatatesMusakka())),
+              child: Menu(
+                  name: "Patates Musakka",
+                  imgPath: "images/Patates-Musakka.jpg",
+                  calorie: "471 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => EristeliBulgurPilavi())),
+              child: Menu(
+                  name: "Erişteli Bulgur Pilavı",
+                  imgPath: "images/eristeli-bulgur-pilavi.jpg",
+                  calorie: "266 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => SutluUnHelvasi())),
+              child: Menu(
+                name: "Sütlü Un Helvası",
+                imgPath: "images/Sütlü-Un-Helvası.jpg",
+                calorie: "295 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PatatesMusakka())),
-                child: Menu(
-                    name: "Patates Musakka",
-                    imgPath: "images/Patates-Musakka.jpg",
-                    calorie: "471 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => EristeliBulgurPilavi())),
-                child: Menu(
-                    name: "Erişteli Bulgur Pilavı",
-                    imgPath: "images/eristeli-bulgur-pilavi.jpg",
-                    calorie: "266 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SutluUnHelvasi())),
-                child: Menu(
-                  name: "Sütlü Un Helvası",
-                  imgPath: "images/Sütlü-Un-Helvası.jpg",
-                  calorie: "295 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

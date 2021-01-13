@@ -8,6 +8,7 @@ class EristeliYesilMercimekliYogurtCorbasi extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Erişteli Yeşil Mercimekli Yoğurt Çorbası",

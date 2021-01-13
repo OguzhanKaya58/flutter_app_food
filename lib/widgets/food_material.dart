@@ -33,7 +33,7 @@ class FoodMaterial extends StatelessWidget {
             child: Text(
               "$name",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: size.width/21,
                 color: whiteColor,
               ),
             ),

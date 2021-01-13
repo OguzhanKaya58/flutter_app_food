@@ -13,6 +13,7 @@ class DogmeliKereviz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Düğmeli Kereviz",

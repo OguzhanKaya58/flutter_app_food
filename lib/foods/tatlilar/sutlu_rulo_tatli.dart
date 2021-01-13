@@ -9,10 +9,11 @@ import 'package:flutter_app_food/widgets/materials.dart';
 import 'package:flutter_app_food/widgets/preparation.dart';
 import 'package:flutter_app_food/widgets/recipe.dart';
 
-class SutluRuloTatlo extends StatelessWidget {
+class SutluRuloTatli extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Sütlü Rulo Tatlı",
@@ -50,7 +51,7 @@ class SutluRuloTatlo extends StatelessWidget {
               FoodMaterial(name: "1 yemek kaşığı buğday nişastası"),
               FoodMaterial(name: "1 paket vanilya "),
               FoodMaterial(name: "1 paket kakaolu petibör bisküvi"),
-              FoodMaterial(name: "Arasına koymak için ceviz ve damla çikolata"),
+              FoodMaterial(name: "Ceviz ve damla çikolata"),
               Fabrication(),
               Recipe(
                   recipeName:

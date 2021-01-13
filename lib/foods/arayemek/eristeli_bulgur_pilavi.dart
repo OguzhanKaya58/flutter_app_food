@@ -13,6 +13,7 @@ class EristeliBulgurPilavi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Erişteli Bulgur Pilavı",

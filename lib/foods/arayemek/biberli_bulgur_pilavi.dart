@@ -13,6 +13,7 @@ class BiberliBulgurPilavi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Biberli Bulgur Pilavı",
@@ -53,12 +54,14 @@ class BiberliBulgurPilavi extends StatelessWidget {
               FoodMaterial(name: "4 su bardağı sıcak su"),
               Fabrication(),
               Recipe(
-                  recipeName: "1. Biberleri ve domatesleri küp küp doğrayın. "
+                  recipeName:
+                  "1. Biberleri ve domatesleri küp küp doğrayın. "
                       "\n\n2. Tencerede önce biberleri sıvı yağda kavurun. "
                       "\n\n3. Daha sonra domatesi, salçayı ve tuzunu ekleyin. "
                       "\n\n4. Üzerine yaklaşık 4 su bardağı suyu ve bulyonu koyun. "
                       "\n\n5. Su kaynamaya başlayınca bulgurları ekleyin. "
-                      "\n\n6. Üzerine isteğe bağlı nane serpip suyunu çekene kadar pişirin. Afiyet olsun. "),
+                      "\n\n6. Üzerine isteğe bağlı nane serpip suyunu çekene kadar pişirin. Afiyet olsun. "
+                      ),
             ],
           ),
         ),

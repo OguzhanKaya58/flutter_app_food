@@ -14,6 +14,7 @@ class Sekerpare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Şekerpare",
@@ -47,7 +48,7 @@ class Sekerpare extends StatelessWidget {
               FoodMenuSubtitle(subTitleName: "Hamuru İçin:"),
               FoodMaterial(name: "250 gram tereyağı"),
               FoodMaterial(name: "2 çay bardağı irmik"),
-              FoodMaterial(name: "2 adet yumurta (1 sarısı üzerine sürülecek)"),
+              FoodMaterial(name: "2 adet yumurta"),
               FoodMaterial(name: "Yarım çay kaşığı kabartma tozu"),
               FoodMaterial(name: "Yarım çay kaşığı karbonat"),
               FoodMaterial(name: "1,5 çay bardağı pudra şekeri"),

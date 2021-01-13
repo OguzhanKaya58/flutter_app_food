@@ -14,6 +14,7 @@ class FourMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "4.Gün",
@@ -34,53 +35,51 @@ class FourMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => EzogelinCorbasi())),
-                child: Menu(
-                    name: "Ezogelin Çorbası",
-                    imgPath: "images/ezogelin-corbasi.jpg",
-                    calorie: "55 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => EzogelinCorbasi())),
+              child: Menu(
+                  name: "Ezogelin Çorbası",
+                  imgPath: "images/ezogelin-corbasi.jpg",
+                  calorie: "55 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => CentikKebabi())),
+              child: Menu(
+                  name: "Çentik Kebabı",
+                  imgPath: "images/Çentik-Kebabı.jpg",
+                  calorie: "143 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => KabakSiyirma())),
+              child: Menu(
+                  name: "Kabak Sıyırma",
+                  imgPath: "images/Kabak-Sıyırma.jpg",
+                  calorie: "131 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => BardaktaTiramisu())),
+              child: Menu(
+                name: "Bardakta Tiramisu",
+                imgPath: "images/Bardakta-Tiramisu.jpg",
+                calorie: "375 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CentikKebabi())),
-                child: Menu(
-                    name: "Çentik Kebabı",
-                    imgPath: "images/Çentik-Kebabı.jpg",
-                    calorie: "143 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => KabakSiyirma())),
-                child: Menu(
-                    name: "Kabak Sıyırma",
-                    imgPath: "images/Kabak-Sıyırma.jpg",
-                    calorie: "131 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => BardaktaTiramisu())),
-                child: Menu(
-                  name: "Bardakta Tiramisu",
-                  imgPath: "images/Bardakta-Tiramisu.jpg",
-                  calorie: "375 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

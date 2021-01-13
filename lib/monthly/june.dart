@@ -73,15 +73,15 @@ class June extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                SizedBox(
-                  height: size.height / 24,
-                ),
                 Text(
                   "Haziran",
                   style: TextStyle(
-                      fontSize: 48,
+                      fontSize: size.width / 7,
                       fontWeight: FontWeight.bold,
                       color: whiteColor),
+                ),
+                SizedBox(
+                  height: size.height / 31,
                 ),
                 Weak(),
                 Row(

@@ -14,6 +14,7 @@ class FirindaSebzeliKofte extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Fırında Sebzeli Köfte",
@@ -63,7 +64,7 @@ class FirindaSebzeliKofte extends StatelessWidget {
               FoodMaterial(name: "1 tane kırmızı kapya biber"),
               FoodMenuSubtitle(subTitleName: "Sosu İçin:"),
               FoodMaterial(name: "1 yemek kaşığı domates salçası"),
-              FoodMaterial(name: "1 çay bardağından bir parmak eksik sıvı yağ"),
+              FoodMaterial(name: "1 çay bardağı sıvı yağ"),
               FoodMaterial(name: "2 su bardağı sıcak su"),
               FoodMaterial(name: "Tuz, karabiber, kekik"),
               Fabrication(),

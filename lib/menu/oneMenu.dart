@@ -15,6 +15,7 @@ class OneMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "1.Gün",
@@ -35,55 +36,53 @@ class OneMenu extends StatelessWidget {
               }),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  kPrimaryColor,
-                  kPrimaryLightColor,
-                ]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => YaylaCorbasi())),
-                child: Menu(
-                    name: "Yayla Çorbası",
-                    imgPath: "images/yayla.jpg",
-                    calorie: "93 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FirindaTavukKanat())),
-                child: Menu(
-                    name: "Fırında Tavuk Kanat",
-                    imgPath: "images/firinda-tavuk-kanat.jpg",
-                    calorie: "427 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => BulgurPilavi())),
-                child: Menu(
-                    name: "Bulgur Pilavı",
-                    imgPath: "images/bulgurPilavi.jpg",
-                    calorie: "149 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => KarisikTursu())),
-                child: Menu(
-                    name: "Karışık Turşu",
-                    imgPath: "images/tursu.jpg",
-                    calorie: "24 Kalori"),
-              ),
-            ],
-          ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                kPrimaryColor,
+                kPrimaryLightColor,
+              ]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => YaylaCorbasi())),
+              child: Menu(
+                  name: "Yayla Çorbası",
+                  imgPath: "images/yayla.jpg",
+                  calorie: "93 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => FirindaTavukKanat())),
+              child: Menu(
+                  name: "Fırında Tavuk Kanat",
+                  imgPath: "images/firinda-tavuk-kanat.jpg",
+                  calorie: "427 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => BulgurPilavi())),
+              child: Menu(
+                  name: "Bulgur Pilavı",
+                  imgPath: "images/bulgurPilavi.jpg",
+                  calorie: "149 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => KarisikTursu())),
+              child: Menu(
+                  name: "Karışık Turşu",
+                  imgPath: "images/tursu.jpg",
+                  calorie: "24 Kalori"),
+            ),
+          ],
         ),
       ),
     );

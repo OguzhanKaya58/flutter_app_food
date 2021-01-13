@@ -13,6 +13,7 @@ class FirikPilavi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Firik Pilavı",
@@ -47,7 +48,7 @@ class FirikPilavi extends StatelessWidget {
               FoodMaterial(name: "1 su bardağı pilavlık bulgur"),
               FoodMaterial(name: "Yarım su bardağı yeşil mercimek"),
               FoodMaterial(name: "1 yemek kaşığı biber salçası"),
-              FoodMaterial(name: "1 adet soğan (büyükçe bir soğan kullandım)"),
+              FoodMaterial(name: "1 adet soğan"),
               FoodMaterial(name: "Yarım çay bardağı kadar sıvı yağ"),
               FoodMaterial(name: "1 yemek kaşığı dolusu tereyağı"),
               FoodMaterial(name: "5-5,5 su bardağı tavuk suyu"),

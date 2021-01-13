@@ -14,6 +14,7 @@ class TwentyTwoMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "22.Gün",
@@ -34,53 +35,51 @@ class TwentyTwoMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => BulgurCorbasi())),
-                child: Menu(
-                    name: "Bulgur Çorbası",
-                    imgPath: "images/bulgur-corbasi.jpg",
-                    calorie: "94 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => BulgurCorbasi())),
+              child: Menu(
+                  name: "Bulgur Çorbası",
+                  imgPath: "images/bulgur-corbasi.jpg",
+                  calorie: "94 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => FirindaEtliKarnabaharYemegi())),
+              child: Menu(
+                  name: "Fırında Etli Karnabahar Yemeği",
+                  imgPath: "images/Fırında-Etli-Karnabahar-Yemeği.jpg",
+                  calorie: "213 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ArpaSehriyeliPilav())),
+              child: Menu(
+                  name: "Arpa Şehriyeli Pilav",
+                  imgPath: "images/arpa-sehriyeli-pilav.jpg",
+                  calorie: "346 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => FindikpareTatlisi())),
+              child: Menu(
+                name: "Fındıkpare Tatlısı",
+                imgPath: "images/Fındıkpare-Tatlısı.jpg",
+                calorie: "251 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => FirindaEtliKarnabaharYemegi())),
-                child: Menu(
-                    name: "Fırında Etli Karnabahar Yemeği",
-                    imgPath: "images/Fırında-Etli-Karnabahar-Yemeği.jpg",
-                    calorie: "213 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => ArpaSehriyeliPilav())),
-                child: Menu(
-                    name: "Arpa Şehriyeli Pilav",
-                    imgPath: "images/arpa-sehriyeli-pilav.jpg",
-                    calorie: "346 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FindikpareTatlisi())),
-                child: Menu(
-                  name: "Fındıkpare Tatlısı",
-                  imgPath: "images/Fındıkpare-Tatlısı.jpg",
-                  calorie: "251 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

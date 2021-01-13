@@ -4,6 +4,7 @@ import 'package:flutter_app_food/theme.dart';
 class Fabrication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -11,7 +12,7 @@ class Fabrication extends StatelessWidget {
         child: Text(
           "Yapılışı",
           style: TextStyle(
-            fontSize: 24,
+            fontSize: size.width/19,
             fontWeight: FontWeight.bold,
             color: whiteColor,
           ),

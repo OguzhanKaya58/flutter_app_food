@@ -8,13 +8,15 @@ class Recipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Center(
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Text(
           "$recipeName",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: size.width/21,
             color: whiteColor,
           ),
         ),

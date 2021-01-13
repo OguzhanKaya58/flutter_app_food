@@ -14,6 +14,7 @@ class PadisahYastigiTatlisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Padişah Yastığı Tatlısı",
@@ -53,7 +54,6 @@ class PadisahYastigiTatlisi extends StatelessWidget {
               FoodMenuSubtitle(subTitleName: "Arası için:"),
               FoodMaterial(name: "1 su bardağı süt"),
               FoodMaterial(name: "1 paket krem şanti"),
-              FoodMaterial(name: ""),
               FoodMenuSubtitle(subTitleName: "Şerbeti için:"),
               FoodMaterial(name: "3. 5 su bardağı su"),
               FoodMaterial(name: "2. 5 su bardağı toz şeker"),

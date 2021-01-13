@@ -10,7 +10,7 @@ class ImagePath extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       alignment: Alignment.topCenter,
-      height: size.height / 3.18,
+      height: size.height / 3.14,
       width: size.width,
       decoration: BoxDecoration(
         image: DecorationImage(

@@ -14,6 +14,7 @@ class FirindaTavukSis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "Fırında Tavuk Şiş",
@@ -44,7 +45,7 @@ class FirindaTavukSis extends StatelessWidget {
                 cooking: "30dk",
               ),
               Materials(),
-              FoodMaterial(name: "1 kg kadar kemiksiz göğüs eti ya da pirzola"),
+              FoodMaterial(name: "1 kg kadar kemiksiz göğüs eti"),
               FoodMenuSubtitle(subTitleName: "Marine için:"),
               FoodMaterial(name: "3 yemek kaşığı yoğurt"),
               FoodMaterial(name: "Yarım su bardağı sıvı yağ"),

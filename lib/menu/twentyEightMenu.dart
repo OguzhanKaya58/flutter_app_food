@@ -14,6 +14,7 @@ class TwentyEightMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         title: Text(
           "28.Gün",
@@ -34,53 +35,51 @@ class TwentyEightMenu extends StatelessWidget {
         shadowColor: Colors.transparent,
         leading: BackButton(color: whiteColor),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [kPrimaryColor, kPrimaryLightColor]),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => KisCorbasi())),
-                child: Menu(
-                    name: "Kış Çorbası",
-                    imgPath: "images/Kış-Çorbası.jpg",
-                    calorie: "124 Kalori"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [kPrimaryColor, kPrimaryLightColor]),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => KisCorbasi())),
+              child: Menu(
+                  name: "Kış Çorbası",
+                  imgPath: "images/Kış-Çorbası.jpg",
+                  calorie: "124 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DalyanKofte())),
+              child: Menu(
+                  name: "Dalyan Köfte",
+                  imgPath: "images/Dalyan-Köfte.jpg",
+                  calorie: "149 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => BiberliBulgurPilavi())),
+              child: Menu(
+                  name: "Biberli Bulgur Pilavı",
+                  imgPath: "images/biberli-bulgur-pilavi.jpg",
+                  calorie: "162 Kalori"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => BaklavalikYufkadanFistikliKatmer())),
+              child: Menu(
+                name: "Baklavalık Yufkadan Fıstıklı Katmer",
+                imgPath: "images/Baklavalık-Yufkadan-Fıstıklı-Katmer.jpeg",
+                calorie: "510 Kalori",
               ),
-              GestureDetector(
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => DalyanKofte())),
-                child: Menu(
-                    name: "Dalyan Köfte",
-                    imgPath: "images/Dalyan-Köfte.jpg",
-                    calorie: "149 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => BiberliBulgurPilavi())),
-                child: Menu(
-                    name: "Biberli Bulgur Pilavı",
-                    imgPath: "images/biberli-bulgur-pilavi.jpg",
-                    calorie: "162 Kalori"),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => BaklavalikYufkadanFistikliKatmer())),
-                child: Menu(
-                  name: "Baklavalık Yufkadan Fıstıklı Katmer",
-                  imgPath: "images/Baklavalık-Yufkadan-Fıstıklı-Katmer.jpeg",
-                  calorie: "510 Kalori",
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
